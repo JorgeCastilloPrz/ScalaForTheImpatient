@@ -4,8 +4,8 @@ Project created to learn Scala basics by solving all the scala exercises propose
 
 Solved exercises
 ----------------
-* *Chapter 1:* The Basics
-* *Chapter 2:* Control Structures and Functions
+* **Chapter 1:** The Basics
+* **Chapter 2:** Control Structures and Functions
 
 Developed By
 ------------
