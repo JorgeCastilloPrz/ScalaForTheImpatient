@@ -1,6 +1,11 @@
 ScalaForTheImpatient
 ====================
-Project created to learn Scala basics by resolving all the scala exercises proposed by the well known [ScalaForTheImpatient](http://www.horstmann.com/scala/index.html) book.
+Project created to learn Scala basics by solving all the scala exercises proposed by the well known [ScalaForTheImpatient](http://www.horstmann.com/scala/index.html) book.
+
+Solved exercises
+----------------
+* *Chapter 1:* The Basics
+* *Chapter 2:* Control Structures and Functions
 
 Developed By
 ------------
