@@ -1,6 +1,6 @@
 ScalaForTheImpatient
 ====================
-Project created to learn Scala basics by resolving all the scala exercises proposed by the well known [ScalaForTheImpatient][scala-book] book.
+Project created to learn Scala basics by resolving all the scala exercises proposed by the well known [ScalaForTheImpatient](http://www.horstmann.com/scala/index.html) book.
 
 Developed By
 ------------
@@ -26,5 +26,3 @@ License
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-
-[scala-book] http://www.horstmann.com/scala/index.html
