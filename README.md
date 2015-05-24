@@ -5,8 +5,8 @@ Project created to learn Scala basics by solving all the scala exercises propose
 Solved exercises
 ----------------
 The exercises have been solved by using unit testing. You can find out all the solutions in the "src/test/scala/" directory. Some of the exercises have not
-been solved by using a test as they are theoretical. In addition, theoretical answers to non-theoretical exercises are attached to the class documentation of the
-exercise object file.
+been solved by using a test as they are theoretical. In addition, some practical exercises need a theoretical answer too. In those cases, the answer is
+included in the documentation of the exercise object class.
 
 * **Chapter 1:** The Basics
 * **Chapter 2:** Control Structures and Functions
