@@ -8,6 +8,9 @@ Exercises have been solved with unit tests. You can find out all the solutions i
 You will not find a test for all the exercises, as some of them are theoretical. In addition, some practical exercises
 need a theoretical answer too. In those cases, the answer is included in the documentation of the exercise object class.
 
+Each exercise class is intentionally declared as an `Object` to provide a simple syntax for method calls (like the one
+for static methods in Java): `Exercise10.takeLastThreeElementsFrom("Hello")`.
+
 * **Chapter 1:** The Basics
 * **Chapter 2:** Control Structures and Functions
 
