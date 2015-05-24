@@ -1,5 +1,5 @@
-ScalaForTheImpatient exercises
-------------------------------
+ScalaForTheImpatient
+====================
 Project created to learn Scala basics by solving all the scala exercises proposed by the well known [ScalaForTheImpatient](http://www.horstmann.com/scala/index.html) book.
 
 Solved exercises
