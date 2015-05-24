@@ -14,10 +14,10 @@ package com.github.jorgecastilloprz.scalafortheimpatient.chapter2
 object Exercise2 {
 
   def main(args: Array[String]) {
-    println("The type of an empty block \"{}\" is Unit, and its value is: " + {})
+    println("The type of an empty block \"{}\" is Unit, and its value is: " + getValueForEmptyBlock())
   }
 
-  def getValueForEmptyBlock(): String = {
-    {}.toString
+  def getValueForEmptyBlock(): Unit = {
+    {}
   }
 }

@@ -9,13 +9,9 @@ import org.scalatest.junit.JUnitRunner
  * @since 24/05/15
  */
 @RunWith(classOf[JUnitRunner])
-class Exercise2TestSuite extends FunSuite {
+class Exercise3TestSuite extends FunSuite {
 
-  test("Type for empty block \"{}\" is Unit") {
-    assert({}.isInstanceOf[Unit])
-  }
-
-  test("Value for empty block is ()") {
-    assert(Exercise2.getValueForEmptyBlock() === ())
+  test("Assign is of type Unit") {
+    assert(Exercise3.checkIfDoubleAssignIsUnit())
   }
 }
