@@ -4,7 +4,7 @@ Project created to learn Scala basics by solving all the scala exercises propose
 
 Solved exercises
 ----------------
-Exercises have been solved with unit tests. You can find out all the solutions in the "src/test/scala/" directory.
+Exercises have been solved using unit tests. You can find out all the solutions in the "src/test/scala/" directory.
 You will not find a test for all the exercises, as some of them are theoretical. In addition, some practical exercises
 need a theoretical answer too. In those cases, the answer is included in the documentation of the exercise object class.
 
