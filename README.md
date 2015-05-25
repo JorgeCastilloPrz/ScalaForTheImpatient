@@ -11,7 +11,7 @@ need a theoretical answer too. In those cases, the answer is included in the doc
 Each exercise class is intentionally declared as an `Object` to provide a simple syntax for method calls (like the one
 for static methods in Java): `Exercise10.takeLastThreeElementsFrom("Hello")`.
 
-The following chapters have been completed and uploaded:
+The following chapters have been totally completed and uploaded:
 
 * **Chapter 1:** The Basics
 * **Chapter 2:** Control Structures and Functions
