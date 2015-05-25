@@ -9,6 +9,8 @@ import scala.math._
 import scala.util.Random
 
 /**
+ * Test suite for chapter 1. You can find my solutions for the 10 exercises given by the book here.
+ *
  * @author jorge
  * @since 25/05/15
  */
