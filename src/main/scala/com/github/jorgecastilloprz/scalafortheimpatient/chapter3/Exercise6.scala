@@ -22,10 +22,10 @@ object Exercise6 {
   }
 
   def rearrangeToReverseAndSortedOrder(values: Array[Int]): Array[Int] = {
-    values.reverse.sorted
+    values.sortWith(_ > _)
   }
 
   def rearrangeToReverseAndSortedArrayBuffer(values: ArrayBuffer[Int]): ArrayBuffer[Int] = {
-    values.reverse.sorted
+    values.sortWith(_ > _)
   }
 }
