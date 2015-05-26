@@ -10,6 +10,7 @@ The following chapters have been totally completed and uploaded:
 * **Chapter 1:** The Basics
 * **Chapter 2:** Control Structures and Functions
 * **Chapter 3:** Working with Arrays
+* **Chapter 4:** Maps and Tuples
 
 Developed By
 ------------
