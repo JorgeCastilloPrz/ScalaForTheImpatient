@@ -24,19 +24,23 @@ class Chapter1TestSuite extends FunSuite {
 
   ```
   scala> 3.
-  !=   %   *   -   <    <=       ==   >=   >>>   asInstanceOf   getClass   isInstanceOf   toChar     toFloat   toLong    toString   unary_-   |
-  ##   &   +   /   <<   <init>   >    >>   ^     equals         hashCode   toByte         toDouble   toInt     toShort   unary_+    unary_~
+  !=   %   *   -   <    <=       ==   >=   >>>   asInstanceOf   getClass   isInstanceOf   toChar
+  toFloat   toLong    toString   unary_-   |
+  ##   &   +   /   <<   <init>   >    >>   ^     equals         hashCode   toByte         toDouble
+  toInt     toShort   unary_+    unary_~
   ```
-  That is the result printed when pressing Tab after typing "3.". Everything you can find in the print is a method.
-  In scala, methods can have any name, so operators like "!=", "*", "<=" are methods too. You could add an int to another by doing:
+  That is the result printed when pressing Tab after typing "3.". Everything you can find in the
+  print is a method.
+  In scala, methods can have any name, so operators like "!=", "*", "<=" are methods too. You could
+  add an int to another by doing:
 
   ```
   scala> 3.+(2)
   res1: Int = 5
   ```
 
-  In `Scala`, primitive types are objects too, so they have plenty of methods that you cannot find if you work with the
-  same type in `Java`.
+  In `Scala`, primitive types are objects too, so they have plenty of methods that you cannot find
+  if you work with the same type in `Java`.
    */
 
   test("2. The square root of 3 followed by its square is almost 3") {
@@ -58,8 +62,8 @@ class Chapter1TestSuite extends FunSuite {
   -----------
   * Are the `res` variables val or var?
 
-  `res` variables printed by the REPL are `val`. That means that those variables are immutable. You can define your own
-  variables (mutable or immutable) in the REPL by using normal syntax:
+  `res` variables printed by the REPL are `val`. That means that those variables are immutable.
+  You can define your own variables (mutable or immutable) in the REPL by using normal syntax:
 
   ```
   scala> var myTempVar = 1+1
@@ -77,7 +81,8 @@ class Chapter1TestSuite extends FunSuite {
   }
 
   test("4. Multiply \"hello\" 10 times gives you a result of: ") {
-    assert(multiplyStringNTimes("hello", 10) === "hellohellohellohellohellohellohellohellohellohello")
+    assert(multiplyStringNTimes("hello", 10)
+      === "hellohellohellohellohellohellohellohellohellohello")
   }
 
   def multiplyStringNTimes(stringToMultiply: String, times: Int): String = {
@@ -98,9 +103,10 @@ class Chapter1TestSuite extends FunSuite {
 
   test("6. Using BigInt 2 elevated to 1024 can be computed an is a REALLY BIG integer.") {
     assert(giveMeThePow(2, 1024).toString() ===
-      "1797693134862315907729305190789024733617976978942306572734300811577326758055009631327084773224075360211201138" +
-        "79871393357658789768814416622492847430639474124377767893424865485276302219601246094119453082952085005768838" +
-        "150682342462881473913110540827237163350510684586298239947245938479716304835356329624224137216")
+      "17976931348623159077293051907890247336179769789423065727343008115773267580550096313270847" +
+        "732240753602112011387987139335765878976881441662249284743063947412437776789342486548527" +
+        "630221960124609411945308295208500576883815068234246288147391311054082723716335051068458" +
+        "6298239947245938479716304835356329624224137216")
   }
 
   def giveMeThePow(firstValue: Int, secondValue: Int): BigInt = {
@@ -109,7 +115,8 @@ class Chapter1TestSuite extends FunSuite {
   }
 
   test("7. probablePrime(100, Random) without qualifiers works ok thanks to imports") {
-    println("probablePrime(100, Random) working ok thanks to imports: " + probablePrime(100, Random))
+    println("probablePrime(100, Random) working ok thanks to imports: " +
+      probablePrime(100, Random))
   }
 
   test("8. Random generated number is alfanumeric.") {

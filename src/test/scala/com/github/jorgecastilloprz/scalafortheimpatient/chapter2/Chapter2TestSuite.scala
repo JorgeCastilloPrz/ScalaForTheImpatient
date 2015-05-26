@@ -14,8 +14,8 @@ import org.scalatest.junit.JUnitRunner
 class Chapter2TestSuite extends FunSuite {
 
   /*
-  1. The signum of a number is 1 if its positive, -1 if its negative and 0 if it is zero. Write a function that computes
-  this value
+  1. The signum of a number is 1 if its positive, -1 if its negative and 0 if it is zero. Write a
+  function that computes this value
    */
 
   test("1. Sign result for number 3431 is 1") {
@@ -39,8 +39,8 @@ class Chapter2TestSuite extends FunSuite {
   }
 
   /**
-   * As you can see, the return type is not mandatory if the function is not recursive, as it can be found by scala
-   * just by checking the right side of the = symbol.
+   * As you can see, the return type is not mandatory if the function is not recursive, as it can
+   * be found by scala just by checking the right side of the = symbol.
    */
   def getResultCodeForNumberSign(num: Int) = {
     if (num > 0) 1 else if (num < 0) -1 else 0
@@ -48,8 +48,8 @@ class Chapter2TestSuite extends FunSuite {
 
   /*
   2. What is the value of an empty block expression {}? What is its type?
-  The value of a block is the value of the last expression. The value of an empty block is Unit, as Unit is like the
-  java void type. The value for Unit is a single one, written as ()
+  The value of a block is the value of the last expression. The value of an empty block is Unit,
+  as Unit is like the java void type. The value for Unit is a single one, written as ()
    */
 
   test("2. Type for empty block \"{}\" is Unit") {
@@ -65,9 +65,9 @@ class Chapter2TestSuite extends FunSuite {
   }
 
   /*
-  3. Come up with one situation where the assignment x = y = 1 is valid in Scala. (Hint: Pick a suitable type for x.)
-  The solution is just to know that in Scala, the value of an assignment is of type Unit. If an assignment is the
-  last expression of a block, the value of that block is Unit.
+  3. Come up with one situation where the assignment x = y = 1 is valid in Scala. (Hint: Pick a
+  suitable type for x.) The solution is just to know that in Scala, the value of an assignment is
+  of type Unit. If an assignment is the last expression of a block, the value of that block is Unit.
    */
 
   test("3. Assign is of type Unit") {
@@ -81,8 +81,9 @@ class Chapter2TestSuite extends FunSuite {
   }
 
   /*
-  4. Write a Scala equivalent for the Java loop: for (int i = 10; i >= 0; i--) System.out.println(i);
-  There are plenty of ways to do this loop, but i solved it just by using method "to" from RichInt to generate a Range
+  4. Write a Scala equivalent for the Java loop:for (int i = 10;i >= 0;i--) System.out.println(i);
+  There are plenty of ways to do this loop, but i solved it just by using method "to" from RichInt
+  to generate a Range
   and then reverse it. You can loop over that final sequence with a simple for.
    */
 
@@ -109,8 +110,8 @@ class Chapter2TestSuite extends FunSuite {
   }
 
   /*
-  6. Write a for loop for computing the product of the Unicode codes of all letters in a string. For example, the product
-  of the characters in "Hello" is 9415087488L.
+  6. Write a for loop for computing the product of the Unicode codes of all letters in a string.
+  For example, the product of the characters in "Hello" is 9415087488L.
    */
 
   test("6. Product of unicode values of every character in \"Hello\" is equals to 9415087488L") {
@@ -138,13 +139,15 @@ class Chapter2TestSuite extends FunSuite {
   }
 
   /*
-   8. Write a function product(s: String) that computes the product, as described in the preceding exercises.
-   - As i did the last 2 exercises by creating a function with 2 different solutions, this one is not necessary anymore.
+   8. Write a function product(s: String) that computes the product, as described in the preceding
+   exercises.
+   - As i did the last 2 exercises by creating a function with 2 different solutions, this one is
+   not necessary anymore.
    */
 
   /*
-   9. Make the function of the preceding exercise a recursive function. (The function that calculates the product of all
-   the character unicode values from a string).
+   9. Make the function of the preceding exercise a recursive function. (The function that
+   calculates the product of all the character unicode values from a string).
     */
 
   test("9. Product of unicode values of every character in \"Hello\" is equals to 9415087488L") {
@@ -158,7 +161,9 @@ class Chapter2TestSuite extends FunSuite {
   }
 
   /*
-  10. Write a function that computes x pow n where n is a integer. Use the following recursive definition:
+  10. Write a function that computes x pow n where n is a integer. Use the following recursive
+  definition:
+
   x pow n = y pow 2 , if n is even and positive, where y = x pow n/2
   x pow n = x * x pow n-1 , if n is odd and positive
   x pow 0 = 1
