@@ -1,0 +1,3 @@
+Mock file created to allow some tests to pass. Some of the tests are going to take the file, read
+it word by word, and then print the count for every word. Are you ready for the rock and roll?
+I am.
