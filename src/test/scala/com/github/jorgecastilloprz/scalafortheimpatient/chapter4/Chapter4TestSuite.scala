@@ -1,14 +1,15 @@
 package com.github.jorgecastilloprz.scalafortheimpatient.chapter4
 
 import java.io.File
-import java.util.Scanner
+import java.util.{Calendar, Scanner}
 
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
 import org.scalatest.junit.JUnitRunner
 
-import scala.collection.SortedMap
 import scala.collection.JavaConversions.mapAsScalaMap
+import scala.collection.JavaConversions.propertiesAsScalaMap
+import scala.collection.{SortedMap, mutable}
 
 /**
  * @author jorge
@@ -126,5 +127,89 @@ class Chapter4TestSuite extends FunSuite {
       map += (nextWord -> (map.getOrElse(nextWord, 0) + 1))
     }
     map
+  }
+
+  test("6. Define a linked hash map that maps \"Monday\" to java.util.Calendar.MONDAY, and " +
+    "similarly for the other weekdays. Demonstrate that the elements are visited in insertion " +
+    "oder.") {
+
+    assert(getWeekDaysLinkedHashMap.size === 7)
+    assert(getWeekDaysLinkedHashMap("Wednesday") === Calendar.WEDNESDAY)
+    assert((for (key <- getWeekDaysLinkedHashMap.keySet) yield key) ===
+      Set("Wednesday", "Monday", "Saturday", "Thursday", "Tuesday", "Friday", "Sunday"))
+  }
+
+  def getWeekDaysLinkedHashMap: mutable.LinkedHashMap[String, Int] = {
+    val weekDays: mutable.LinkedHashMap[String, Int] = mutable.LinkedHashMap(
+      "Monday" -> Calendar.MONDAY, "Tuesday" -> Calendar.TUESDAY, "Wednesday" -> Calendar.WEDNESDAY,
+      "Thursday" -> Calendar.THURSDAY, "Friday" -> Calendar.FRIDAY, "Saturday" -> Calendar.SATURDAY,
+      "Sunday" -> Calendar.SUNDAY)
+
+    weekDays
+  }
+
+  test("7. Print a table of all Java roperties, like this:" +
+    "java.runtime.name      | Java(TM) SE Runtime Enviroment" +
+    "sun.boot.library.path  | /home/apps/jdk1.6.0_21/jre/lib/i386" +
+    "java.vm.version        | 17.0-b16" +
+    "java.vm.vendor         | Sun Microsystems Inc." +
+    "java.vendor.url        | http://java.sun.com/" +
+    "path.separator         | :" +
+    "java.vm.name           | Java HotSpot(TM) Server VM" +
+    "" +
+    "You need to find the length of the longest key before you can print the table") {
+
+    printJavaPropertiesFormattedTable
+  }
+
+  def printJavaPropertiesFormattedTable {
+    val props: scala.collection.Map[String, String] = System.getProperties
+    val longestPropLength = props.keySet.maxBy(_.length).length
+    println("\n\nFormatted Java system properties table:\n")
+    for ((k, v) <- props) println(k + " " * (longestPropLength - k.length + 1) + "| " + v)
+  }
+
+  test("8. Write a function minmax(values: Array[Int]) that returns a pair containing the " +
+    "smallest and largest values in the array") {
+
+    assert(minmax(Array(3, 99, -12, 0, 9, 679, 51)) ===(-12, 679))
+  }
+
+  def minmax(values: Array[Int]) = (values.min, values.max)
+
+  test("9. Write a function lteqgt(values: Array[Int], v: Int) that returns a triple containing " +
+    "the counts of values less than v, equal to v, and greater than v") {
+
+    assert(lteqgt(Array(3, 99, -12, 0, 9, 679, 51), 20) ===(4, 0, 3))
+  }
+
+  def lteqgt(values: Array[Int], v: Int) =
+    (values.count(_ < v), values.count(_ == v), values.count(_ > v))
+
+  test("10. What happens when you zip together two strings, such as \"Hello\".zip(\"World\")? " +
+    "Come up with a plausible use case.") {
+
+    assert("Hello".zip("World") ===
+      Vector(('H', 'W'), ('e', 'o'), ('l', 'r'), ('l', 'l'), ('o', 'd')))
+    //generates a Vector of pairs (tuples of 2 elements)
+
+    println("Decrypt Lorem ipsum text: " + decryptText("Lorem ipsum dolor sit amet,").mkString(" "))
+
+  }
+
+  def decryptText(text: String) = {
+    val encryptionPairs = getEncryptionEquivalencePairs()
+    for ((k, v) <- encryptionPairs) yield k
+  }
+
+  def getEncryptionEquivalencePairs() = {
+    val seedText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod " +
+      "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis " +
+      "nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute" +
+      " irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla " +
+      "pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia " +
+      "deserunt mollit anim id est laborum."
+
+    "Hello World, this is a test!".zip(seedText)
   }
 }
