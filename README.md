@@ -15,6 +15,7 @@ The following chapters have been totally completed and uploaded:
 * **Chapter 3:** (10 exercises) Working with Arrays
 * **Chapter 4:** (10 exercises) Maps and Tuples
 * **Chapter 5:** (10 exercises) Classes
+* **Chapter 6:** (8 exercises) Objects
 
 Developed By
 ------------
