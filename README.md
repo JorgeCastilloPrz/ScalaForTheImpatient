@@ -1,7 +1,7 @@
 ScalaForTheImpatient
 ====================
 
-![Scala book](/art/scalabook.png)
+![Scala book](https://raw.githubusercontent.com/JorgeCastilloPrz/ScalaForTheImpatient/develop/art/scalabook.jpg)
 
 Project created to learn Scala basics by solving all the scala exercises proposed by the well known [ScalaForTheImpatient](http://www.horstmann.com/scala/index.html) book.
 
