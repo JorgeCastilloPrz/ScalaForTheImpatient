@@ -98,5 +98,39 @@ class Chapter5TestSuite extends FunSuite {
     * */
   }
 
-  test("6. "){}
+  test("6. In the Person class of Section 5.1, on page 49, provide a primary constructor that " +
+    "turns negative ages to 0") {
+
+    val person1 = new Person(-30)
+    val person2 = new Person(45)
+    val person3 = new Person(-1)
+
+    assert(person1.age === 0)
+    assert(person2.age === 45)
+    assert(person3.age === 0)
+  }
+
+  test("7. Write a class Person with a primary constructor that accepts a string containing " +
+    "a first name, a space, and a last name, such as new Person(\"Fred Smith\". Supply read-only " +
+    "properties firstName and lastName. Should the primary constructor parameter be a var, a " +
+    "val, or a plain parameter? Why?") {
+
+    val person1 = new PersonImproved("Fernando Alonso")
+    val person2 = new PersonImproved("Bruce Banner")
+
+    assert(person1.firstName === "Fernando" && person1.lastName === "Alonso")
+    assert(person2.firstName === "Bruce" && person2.lastName === "Banner")
+
+    /* I have declared the arg as a plain param to hide its visibility from the outside. I dont
+    * want another classes to know about its value, and just get the values for name and lastname.*/
+  }
+
+  test("8. Make a class Car with read-only properties for manufacturer, model name, and model " +
+    "year, and a read-write property for the license plate. Supply four constructors. All " +
+    "require the manufacturer and model name. Optionally, model year and license plate can also " +
+    "be specified in the constructor. If not, the model year is set to -1 and the license plate " +
+    "to the empty string. Which constructor are you choosing as the primary constructor? Why?") {
+
+    
+  }
 }
