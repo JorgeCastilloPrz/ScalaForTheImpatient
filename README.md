@@ -10,11 +10,11 @@ Solved exercises
 Exercises have been solved using unit tests. You can find out all the solutions in the "src/test/scala/" directory.
 The following chapters have been totally completed and uploaded:
 
-* **Chapter 1:** The Basics
-* **Chapter 2:** Control Structures and Functions
-* **Chapter 3:** Working with Arrays
-* **Chapter 4:** Maps and Tuples
-* **Chapter 5:** Classes
+* **Chapter 1:** (10 exercises) The Basics
+* **Chapter 2:** (10 exercises) Control Structures and Functions
+* **Chapter 3:** (10 exercises) Working with Arrays
+* **Chapter 4:** (10 exercises) Maps and Tuples
+* **Chapter 5:** (10 exercises) Classes
 
 Developed By
 ------------
