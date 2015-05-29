@@ -131,6 +131,52 @@ class Chapter5TestSuite extends FunSuite {
     "be specified in the constructor. If not, the model year is set to -1 and the license plate " +
     "to the empty string. Which constructor are you choosing as the primary constructor? Why?") {
 
-    
+    val car1 = new Car("Renault", "Megane")
+    val car2 = new Car("Renault", "Megane", 2014)
+    val car3 = new Car("Renault", "Megane", "1234 TYZ")
+    val car4 = new Car("Renault", "Megane", 2014, "1234 TYZ")
+
+    assert(car1.modelYear === -1 && car1.licensePlate === "")
+    assert(car2.licensePlate === "")
+    assert(car3.modelYear === -1)
+    car3.licensePlate = "0000 HXY"
+    assert(car3.licensePlate === "0000 HXY")
+
+    /* As i was forced to create 4 constructors (primary one plus 3 auxiliary ones), i chose the
+    one with 4 arguments as the primary constructor. By doing that, i can rewrite this() calls to
+    previous auxiliary constructor for each case. */
+  }
+
+  test("9. Reimplement the class of the preceding exercise in Java, C# or C++ (your choice). " +
+    "How much shorter is the Scala class?") {
+
+    /* To check the diff between the Scala and the Java Car classes, check them out at the
+     chapter5/classes package. It would have been a really bigger difference if i would have
+     used default params, but i was forced not to do it because the exercise asked me to
+     use 4 constructors. Using default params, 1 constructor (the primary one) would have been
+     enough. */
+  }
+
+  test("10. Consider the class" +
+    "" +
+    "class Employee(val: name: String, var salary: Double) {" +
+    "   def this() { this(\"John Q. Public\", 0.0) }" +
+    "}" +
+    "" +
+    "Rewrite i to use explicit fields and a default primary constructor. Which form do you " +
+    "prefer? Why?") {
+
+    val employee = new Employee()
+    val employee2 = new Employee("John Doe")
+    val employee3 = new Employee("John Doe", 5000.0)
+    val employee4 = new Employee(paramSalary = 5000)
+
+    assert(employee.name === "John Q. Public" && employee.salary === 0.0)
+    assert(employee2.name === "John Doe" && employee2.salary === 0.0)
+    assert(employee3.name === "John Doe" && employee3.salary === 5000.0)
+    assert(employee4.name === "John Q. Public" && employee4.salary === 5000)
+
+    /* I would totally choose the default primary constructor mode, as it is really simple but
+    so powerful. */
   }
 }
