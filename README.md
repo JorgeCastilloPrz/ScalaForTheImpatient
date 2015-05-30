@@ -16,6 +16,7 @@ The following chapters have been totally completed and uploaded:
 * **Chapter 4:** (10 exercises) Maps and Tuples
 * **Chapter 5:** (10 exercises) Classes
 * **Chapter 6:** (8 exercises) Objects
+* **Chapter 7:** (10 exercises) Packages and Imports
 
 Developed By
 ------------
